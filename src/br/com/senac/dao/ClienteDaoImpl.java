@@ -77,6 +77,7 @@ public class ClienteDaoImpl implements ClienteDao {
     public void excluir(int id) throws SQLException {
         try {
             conexao = FabricaConexao.abrirConexao();
+            System.out.println("Corrigindo erro...");
             preparaSql = conexao
                 .prepareStatement("DELETE FROM cliente WHERE id = ?");
             preparaSql.setInt(1, id);
